@@ -11,7 +11,58 @@ form .label {
 }
 
 #comics-show .card {
-  background-color: #fff;
+  width: 75%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+#comics-show .card h3,
+#comics-show .card .h3 {
+  margin-bottom: 13px;
+  font-size: 30px;
+}
+
+#comics-show .card p {
+  margin-bottom: 5px;
+}
+
+#comics-show .card ul {
+  list-style: none;
+}
+
+#comics-show .card .card-infos-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#comics-show .card .card-img-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#comics-show .card .card-img-container .img-pod {
+  z-index: 1;
+  height: 359px;
+  width: 239px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+}
+
+#comics-show .card .card-img-container .img-pod img {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  height: 350px;
+  width: 230px;
 }
 
 #comics-index .card {
@@ -63,6 +114,7 @@ form .label {
   border-radius: 15px;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
   background: linear-gradient(90deg, #ff9966, #ff5e62);
+  transition: all 0.3s s;
 }
 
 #comics-index .card .card-img-container .img-pod:hover {
