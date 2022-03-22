@@ -8,14 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css')}}">
 </head>
 <body>
-    <h1>
-        aodskoasd
-    </h1>
-    <header>
-        <nav>
-            <a href="">home</a><a href="">comics</a>
-        </nav>
-    </header>
+    @include('includes.header')
 
     <main>
         @yield('content')
