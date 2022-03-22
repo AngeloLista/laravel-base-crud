@@ -1,5 +1,121 @@
 @charset "UTF-8";
 
+form input {
+  width: 100%;
+  padding: 12px 10px;
+  margin: 8px 0;
+}
+
+form .label {
+  margin-bottom: 7px;
+}
+
+#comics-show .card {
+  background-color: #fff;
+}
+
+#comics-index .card {
+  width: 35%;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: default;
+}
+
+#comics-index .card:hover {
+  transform: scale(1.05);
+}
+
+#comics-index .card h3,
+#comics-index .card .h3 {
+  margin-bottom: 15px;
+}
+
+#comics-index .card ul {
+  list-style: none;
+}
+
+#comics-index .card .card-infos-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+#comics-index .card .card-img-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#comics-index .card .card-img-container .img-pod {
+  z-index: 1;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -15%;
+  height: 301px;
+  width: 202px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+}
+
+#comics-index .card .card-img-container .img-pod:hover {
+  height: 306px;
+  width: 207px;
+}
+
+#comics-index .card .card-img-container .img-pod img {
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  height: 291px;
+  width: 192px;
+}
+
+#comics-index .card .card-img-container .img-pod img:hover {
+  height: 296px;
+  width: 197px;
+}
+
+#home h1,
+#home .h1 {
+  color: white;
+}
+
+#home a {
+  color: white;
+}
+
+body {
+  background: linear-gradient(90deg, #2b33b2, #1487cc);
+}
+
+.btn-container {
+  padding: 10px 0;
+}
+
+.btn-container .discover-btn {
+  font-size: 14px;
+  width: 66%;
+  border: none;
+  background: linear-gradient(90deg, #ff9966, #ff5e62);
+  padding: 10px 15px;
+  border-radius: 50px;
+  color: white;
+  box-shadow: 1px 5px 1.5rem rgba(255, 94, 98, 0.5);
+  text-decoration: none;
+  transition: background 1s ease-in-out;
+}
+
+.btn-container .discover-btn:hover {
+  background: linear-gradient(90deg, #ff8345, #ff3135);
+}
+
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
