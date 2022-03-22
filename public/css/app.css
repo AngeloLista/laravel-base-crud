@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+form {
+  color: white;
+}
+
 form input {
   width: 100%;
   padding: 12px 10px;

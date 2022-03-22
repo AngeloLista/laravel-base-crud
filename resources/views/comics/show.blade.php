@@ -6,7 +6,7 @@
 
 @section('content')
     <section id="comics-show" class="d-flex flex-wrap justify-content-center">
-        <div class="card p-4 m-5">
+        <div class="card p-4 m-3">
             <div class="row">
                 <div class="col-9">
                     <h3></strong>{{$comic->title}}</h3>
@@ -20,10 +20,13 @@
                 <div class="col-6 card-infos-container">
                     {{-- Infos --}}
                         <div class="card-infos">
-                            <p><strong>Description: </strong>{{$comic->description}}€</p>
-                            <p><strong>Price: </strong>{{$comic->price}}€</p>
-                            <p><strong>Sale Date: </strong>{{$comic->sale_date}}</p>
-                            <p><strong>Type: </strong>{{$comic->type}}</p>
+                            <p><span class="text-muted">{{$comic->description}}</span></p>
+                            <p><strong>Price: </strong>
+                                <span class="text-muted">{{$comic->price}}€</span></p>
+                            <p><strong>Sale Date: </strong>
+                                <span class="text-muted">{{$comic->sale_date}}</span></p>
+                            <p><strong>Type: </strong>
+                                <span class="text-muted">{{$comic->type}}</span></p>
                         </div>
                     </div>
                 <div class="col-6">

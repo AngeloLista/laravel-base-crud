@@ -15,9 +15,15 @@
                     <div class="col-6 card-infos-container">
                         {{-- Infos --}}
                             <div class="card-infos">
-                                <p><strong>Price: </strong>{{$comic->price}}€</p>
-                                <p><strong>Sale Date: </strong>{{$comic->sale_date}}</p>
-                                <p><strong>Type: </strong>{{$comic->type}}</p>
+                                <p><strong>Price: </strong>
+                                    <span class="text-muted">{{$comic->price}}€</span>
+                                </p>
+                                <p><strong>Sale Date: </strong>
+                                    <span class="text-muted">{{$comic->sale_date}}</span>
+                                </p>
+                                <p><strong>Type: </strong>
+                                    <span class="text-muted">{{$comic->type}}</span>
+                                </p>
                             </div>
                             {{-- Scopri di più --}}
                             <div class="btn-container"><a class="discover-btn"href="{{ route('comics.show', $comic->id) }}">Scopri di più</a></div>
