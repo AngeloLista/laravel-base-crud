@@ -17,7 +17,7 @@
                         <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
-                            <button class="discover-btn red-btn" type="submit">Elimina</button>
+                            <button class="discover-btn red-btn form-btn" type="submit">Elimina</button>
                         </form>
                     </div>
                     {{-- Scopri di più --}}
