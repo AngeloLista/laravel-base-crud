@@ -16,7 +16,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6 card-infos-container">
+                    <div class="col-8 card-infos-container">
                         {{-- Infos --}}
                             <div class="card-infos">
                                 <p><strong>Price: </strong>
@@ -30,17 +30,23 @@
                                 </p>
                             </div>
                             <div class="buttons">
-                                {{-- Scopri di più --}}
-                                <div class="btn-container"><a class="discover-btn orange-btn"href="{{ route('comics.show', $comic->id) }}">Scopri di più</a></div>
-                                {{-- Modifica --}}
-                                <div class="btn-container me-2"><a class="discover-btn green-btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
-                                {{-- Elimina --}}
-                                <div class="btn-container p-0">
-                                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="discover-btn red-btn form-btn" type="submit">Elimina</button>
-                                    </form>
+                                <div class="row">
+                                    <div class="col-6 d-flex flex-column justify-content-end">
+                                        {{-- Scopri di più --}}
+                                        <div class="btn-container"><a class="discover-btn orange-btn"href="{{ route('comics.show', $comic->id) }}">Scopri di più</a></div>
+                                    </div>
+                                    <div class="col-6 d-flex flex-column align-items-end">
+                                        {{-- Modifica --}}
+                                        <div class="btn-container"><a class="discover-btn green-btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
+                                        {{-- Elimina --}}
+                                        <div class="btn-container p-0">
+                                            <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="discover-btn red-btn form-btn" type="submit">Elimina</button>
+                                            </form>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                     </div>
