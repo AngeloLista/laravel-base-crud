@@ -17,7 +17,7 @@
                 <div class="col-5 d-flex justify-content-end">
                     {{-- Elimina --}}
                     <div class="btn-container p-0 me-2">
-                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
                             @csrf
                             @method('DELETE')
                             <button class="discover-btn red-btn form-btn" type="submit">Elimina</button>
@@ -53,4 +53,18 @@
             </div>
         </div>
     </section>
+@endsection
+
+@section('additional-scripts')
+    <script>
+        const deleteForms = document.querySelectorAll('.delete-form');
+        deleteForms.forEach(form => {
+            const title = form.getAttribute('data-name');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const accept = confirm(`Are you sure you want to delete ${title}?`);
+                if (accept) e.target.submit();
+            });
+        })
+    </script>
 @endsection

@@ -5,7 +5,7 @@
 @section('content')
 
     @include('includes.session_message')
-    
+
     <section id="comics-index" class="d-flex flex-wrap justify-content-center">
 
         @foreach ($comics as $comic)
@@ -36,7 +36,7 @@
                                 <div class="btn-container me-2"><a class="discover-btn green-btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
                                 {{-- Elimina --}}
                                 <div class="btn-container p-0">
-                                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
                                         @csrf
                                         @method('DELETE')
                                         <button class="discover-btn red-btn form-btn" type="submit">Elimina</button>
@@ -56,4 +56,18 @@
             </div>
         @endforeach
     </section>
+@endsection
+
+@section('additional-scripts')
+    <script>
+        const deleteForms = document.querySelectorAll('.delete-form');
+        deleteForms.forEach(form => {
+            const title = form.getAttribute('data-name');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const accept = confirm(`Are you sure you want to delete ${title}?`);
+                if (accept) e.target.submit();
+            });
+        })
+    </script>
 @endsection
