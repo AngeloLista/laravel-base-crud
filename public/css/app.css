@@ -5,6 +5,7 @@ form {
 }
 
 form input {
+  border: 0;
   width: 100%;
   padding: 12px 10px;
   margin: 8px 0;
@@ -143,6 +144,15 @@ form .label {
 #comics-index .card .card-img-container .img-pod img:hover {
   height: 296px;
   width: 197px;
+}
+
+#edit-comic {
+  color: white;
+}
+
+#edit-comic h1,
+#edit-comic .h1 {
+  text-shadow: 1px 1px 15px rgba(0, 0, 0, 0.5);
 }
 
 #home h1,
