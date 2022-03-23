@@ -182,21 +182,21 @@ body {
 }
 
 .red-btn {
-  background: linear-gradient(90deg, #ff6666, #ff5e8e);
+  background: linear-gradient(90deg, #ff5e8e, #ff6666);
   box-shadow: 1px 5px 1.5rem rgba(173, 64, 66, 0.5);
 }
 
 .red-btn:hover {
-  background: linear-gradient(90deg, #ff3d3d, #ff2f6d);
+  background: linear-gradient(90deg, #ff2f6d, #ff3d3d);
 }
 
 .green-btn {
-  background: linear-gradient(90deg, #5ae755, #a8e657);
+  background: linear-gradient(90deg, #a8e657, #5ae755);
   box-shadow: 1px 5px 1.5rem rgba(108, 255, 94, 0.5);
 }
 
 .green-btn:hover {
-  background: linear-gradient(90deg, #34e42e, #86df12);
+  background: linear-gradient(90deg, #86df12, #34e42e);
 }
 
 .orange-btn {
