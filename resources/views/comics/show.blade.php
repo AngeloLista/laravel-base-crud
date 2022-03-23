@@ -11,27 +11,21 @@
     <section id="comics-show" class="d-flex flex-wrap justify-content-center">
         <div class="card p-4 m-3">
             <div class="row">
-                <div class="col-7">
+                <div class="col-6">
                     <h3></strong>{{$comic->title}}</h3>
                 </div>
-                <div class="col-5 d-flex justify-content-end">
-                    <div class="row">
-                        <div class="col-7 d-flex flex-column justify-content-end">
-                            {{-- Torna alla lista --}}
-                            <div class="btn-container"><a class="discover-btn orange-btn" href="{{ route('comics.index', $comic->id) }}">Torna alla lista</a></div>
-                        </div>
-                        <div class="col-5 d-flex flex-column align-items-end justify-content-center">
-                            {{-- Elimina --}}
-                            <div class="btn-container p-0">
-                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="discover-btn red-btn form-btn mb-1" type="submit">Elimina</button>
-                                </form>
-                            </div>
-                            {{-- Modifica --}}
-                            <div class="btn-container"><a class="discover-btn green-btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
-                        </div>
+                <div class="col-6 d-flex justify-content-end align-items-center">
+                    {{-- Torna alla lista --}}
+                    <div class="btn-container me-3"><a class="discover-btn orange-btn" href="{{ route('comics.index', $comic->id) }}">Torna alla lista</a></div>
+                    {{-- Modifica --}}
+                    <div class="btn-container me-3"><a class="discover-btn green-btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
+                    {{-- Elimina --}}
+                    <div class="btn-container p-0">
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
+                            @csrf
+                            @method('DELETE')
+                            <button class="discover-btn red-btn form-btn m-0" type="submit">Elimina</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -21,6 +21,12 @@
             display: flex;
             justify-content: flex-end;
             flex-direction: column;
+            .card-infos {
+                margin-bottom: 15px;
+                p {
+                    margin-bottom: 0.5rem;
+                }
+            }
         }
         .card-img-container {
             display: flex;

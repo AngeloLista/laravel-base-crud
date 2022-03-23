@@ -113,6 +113,14 @@ form .label {
   flex-direction: column;
 }
 
+#comics-index .card .card-infos-container .card-infos {
+  margin-bottom: 15px;
+}
+
+#comics-index .card .card-infos-container .card-infos p {
+  margin-bottom: 0.5rem;
+}
+
 #comics-index .card .card-img-container {
   display: flex;
   justify-content: flex-end;
