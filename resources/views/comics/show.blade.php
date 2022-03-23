@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+
+    @include('includes.session_message')
+
     <section id="comics-show" class="d-flex flex-wrap justify-content-center">
         <div class="card p-4 m-3">
             <div class="row">

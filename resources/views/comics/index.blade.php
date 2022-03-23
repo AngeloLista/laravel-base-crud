@@ -3,7 +3,11 @@
 @section('title', 'Comics')
 
 @section('content')
+
+    @include('includes.session_message')
+    
     <section id="comics-index" class="d-flex flex-wrap justify-content-center">
+
         @foreach ($comics as $comic)
             <div class="card p-4 m-5">
                 <div class="row">

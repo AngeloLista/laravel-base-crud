@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+
 <section id="edit-comic">
     <h1 class="mb-3">Edit {{ $comic->title }}</h1>
     @if ($errors->any())
