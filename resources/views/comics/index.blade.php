@@ -29,7 +29,13 @@
                             <div class="buttons">
                                 <div class="btn-container"><a class="discover-btn"href="{{ route('comics.show', $comic->id) }}">Scopri di più</a></div>
                                 {{-- Modifica --}}
-                                <div class="btn-container me-2"><a class="discover-btn"href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
+                                <div class="btn-container me-2"><a class="discover-btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
+                                {{-- Elimina --}}
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="discover-btn" type="submit">Elimina</button>
+                                </form>
                             </div>
                     </div>
                     <div class="col-6">
