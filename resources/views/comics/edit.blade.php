@@ -3,7 +3,7 @@
 @section('content')
 <section id="edit-comic">
     <h1 class="mb-5">Modifica {{ $comic->title }}</h1>
-    <form method="post" action="{{ route('comics.update')}}">
+    <form method="post" action="{{ route('comics.update', $comic->id)}}">
         @method('PUT')
         @csrf
     
