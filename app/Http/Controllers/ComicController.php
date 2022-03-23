@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Validation\Rule;
 use App\Models\Comic;
 
 class ComicController extends Controller
@@ -79,7 +79,7 @@ class ComicController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     *   the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -89,7 +89,7 @@ class ComicController extends Controller
     {
 
         $request->validate([
-            'title' => 'required|string|unique:comics|max:100',
+            'title' => ['required', 'string', Rule::unique('comics')->ignore($comic->id), 'max:100'],
             'description' => 'required|string',
             'thumb' => 'required|string|max:255',
             'price' => 'required|numeric|max:999.99',
