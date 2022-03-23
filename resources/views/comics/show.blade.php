@@ -8,11 +8,13 @@
     <section id="comics-show" class="d-flex flex-wrap justify-content-center">
         <div class="card p-4 m-3">
             <div class="row">
-                <div class="col-9">
+                <div class="col-7">
                     <h3></strong>{{$comic->title}}</h3>
                 </div>
-                <div class="col-3 d-flex justify-content-end">
+                <div class="col-5 d-flex justify-content-end">
                     {{-- Scopri di più --}}
+                    <div class="btn-container me-2"><a class="discover-btn"href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
+                    {{-- Modifica --}}
                     <div class="btn-container"><a class="discover-btn"href="{{ route('comics.index', $comic->id) }}">Torna alla lista</a></div>
                 </div>
             </div>

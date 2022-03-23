@@ -26,7 +26,11 @@
                                 </p>
                             </div>
                             {{-- Scopri di più --}}
-                            <div class="btn-container"><a class="discover-btn"href="{{ route('comics.show', $comic->id) }}">Scopri di più</a></div>
+                            <div class="buttons">
+                                <div class="btn-container"><a class="discover-btn"href="{{ route('comics.show', $comic->id) }}">Scopri di più</a></div>
+                                {{-- Modifica --}}
+                                <div class="btn-container me-2"><a class="discover-btn"href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
+                            </div>
                     </div>
                     <div class="col-6">
                         {{-- Titolo --}}
