@@ -13,15 +13,17 @@
                 </div>
                 <div class="col-5 d-flex justify-content-end">
                     {{-- Elimina --}}
-                    <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button class="discover-btn" type="submit">Elimina</button>
-                    </form>
+                    <div class="btn-container p-0 me-2">
+                        <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button class="discover-btn red-btn" type="submit">Elimina</button>
+                        </form>
+                    </div>
                     {{-- Scopri di più --}}
-                    <div class="btn-container me-2"><a class="discover-btn"href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
+                    <div class="btn-container me-2"><a class="discover-btn green-btn" href="{{ route('comics.edit', $comic->id) }}">Modifica</a></div>
                     {{-- Modifica --}}
-                    <div class="btn-container"><a class="discover-btn"href="{{ route('comics.index', $comic->id) }}">Torna alla lista</a></div>
+                    <div class="btn-container"><a class="discover-btn orange-btn" href="{{ route('comics.index', $comic->id) }}">Torna alla lista</a></div>
                 </div>
             </div>
             <div class="row">
