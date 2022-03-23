@@ -3,7 +3,7 @@
 @section('title', 'Create a New Comic')
 
 @section('content')
-<h1 class="mb-3">Crea un nuovo fumetto</h1>
+<h1 class="mb-3">Create a new Comic</h1>
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
