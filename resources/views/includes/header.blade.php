@@ -7,9 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
             <a class="nav-item nav-link @if (Route::currentRouteName() === 'home') active @endif" href="{{ route('home') }}">Home</a>
-            <a class="nav-item nav-link
-            @if (Route::currentRouteName() === 'comics.index') active @endif
-            @if (Route::currentRouteName() === 'comics.show') active @endif" 
+            <a class="nav-item nav-link  @if (Route::currentRouteName() === 'comics.index' || Route::currentRouteName() ===  'comics.show' ) active @endif" 
             href="{{ route('comics.index')}}">Comics</a>
             <a class="nav-item nav-link @if (Route::currentRouteName() === 'comics.create') active @endif" href="{{ route('comics.create')}}">Create</a>
           </div>
