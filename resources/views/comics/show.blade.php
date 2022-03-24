@@ -24,7 +24,7 @@
                         <form action="{{ route('comics.destroy', $comic->id) }}" method="POST" class="delete-form" data-name="{{ $comic->title }}">
                             @csrf
                             @method('DELETE')
-                            <button class="discover-btn red-btn form-btn m-0" type="submit">Elimina</button>
+                            <button class="discover-btn red-btn form-btn" type="submit">Elimina</button>
                         </form>
                     </div>
                 </div>
@@ -42,7 +42,7 @@
                                 <span class="text-muted">{{$comic->type}}</span></p>
                         </div>
                     </div>
-                <div class="col-6">
+                <div class="col-6 d-flex justify-content-end align-items-end">
                     {{-- Titolo --}}
                     <div class="card-img-container mt-3">
                         <div class="img-pod">
