@@ -14,7 +14,7 @@
                 <div class="col-6">
                     <h3></strong>{{$comic->title}}</h3>
                 </div>
-                <div class="col-6 d-flex justify-content-end align-items-center">
+                <div class="col-6 d-flex justify-content-end align-items-start">
                     {{-- Torna alla lista --}}
                     <div class="btn-container me-3"><a class="discover-btn orange-btn" href="{{ route('comics.index', $comic->id) }}">Torna alla lista</a></div>
                     {{-- Modifica --}}
